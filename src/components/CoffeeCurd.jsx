@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
 const CoffeeCurd = ({ coffee, setCoffees, coffees }) => {
-  // eslint-disable-next-line react/prop-types
+  // eslint-disable-next-line react/prop-types, no-unused-vars
   const { _id, name, category, details, taste, photo, suppler } = coffee;
   const handleDelete = (_id) => {
     Swal.fire({
@@ -28,6 +28,7 @@ const CoffeeCurd = ({ coffee, setCoffees, coffees }) => {
                 text: "Your coffee has been deleted.",
                 icon: "success",
               });
+              // eslint-disable-next-line react/prop-types
               const remaining = coffees.filter((cofe) => cofe._id !== _id);
               setCoffees(remaining);
             }
